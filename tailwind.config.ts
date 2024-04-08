@@ -26,7 +26,7 @@ const config = {
           4: '#1E2757',   // Dark Slate Blue
         },
         blue: {
-          1: '#1E88E5',   // Dodger Blue
+          1: '#0E78F9', // Dodger Blue
         },
         sky: {
           1: '#90CAF9',   // Light Sky Blue

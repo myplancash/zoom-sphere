@@ -3,9 +3,9 @@ import React, {ReactNode} from 'react';
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <main> 
-      Navbar
+      {/* Navbar */}
       {children}
-      Footer 
+      {/* Footer  */}
     </main>
   );
 }   

@@ -82,7 +82,7 @@
 
 @layer utilities {
   .flex-center {
-    @apply flex justify-center items-center;
+    @apply flex justify-cente r items-center;
   }
 
   .flex-between {

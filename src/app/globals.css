@@ -232,7 +232,6 @@
   padding-left: 2rem;
 }
 
-
 .cl-socialButtonsIconButton__github {
-  
+   filter: invert();
 }

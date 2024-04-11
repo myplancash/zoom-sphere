@@ -21,10 +21,6 @@ export default function RootLayout({
         formButtonPrimary:
           "bg-slate-500 hover:bg-slate-400 text-sm normal-case",
       },
-      signIn: { 
-          baseTheme: "shadesOfPurple", 
-          variables: { colorPrimary: '#8419d8' }
-      },
       layout: {
         logoImageUrl: 'icons/zoomsphere-logo.svg',
         socialButtonsVariant: 'iconButton'

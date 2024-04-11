@@ -17,8 +17,8 @@ const MobileNav = () => {
         <SheetTrigger asChild>
           <Image
             src="/icons/hamburger.svg"
-            width={36}
-            height={36}
+            width={48}
+            height={48}
             alt="hamburger icon"
             className="cursor-pointer sm:hidden"
           />
@@ -29,7 +29,7 @@ const MobileNav = () => {
               src="/icons/logo.svg"
               width={32}
               height={32}
-              alt="yoom logo"
+              alt="zoom sphere logo"
             />
             <p className="text-[26px] font-extrabold text-white">ZoomSphere</p>
           </Link>

@@ -82,7 +82,7 @@
 
 @layer utilities {
   .flex-center {
-    @apply flex justify-cente r items-center;
+    @apply flex justify-center items-center;
   }
 
   .flex-between {
@@ -109,4 +109,130 @@
     animation-timing-function: ease-in;
     width: 100%;
   }
+}
+
+.cl-internal-1fsg6zy {
+  margin-top: 0px;
+  padding-top: 0.625rem;
+  padding-right: 1.25rem;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  outline-width: 0px;
+  -webkit-user-select: none;
+  cursor: pointer;
+  background-color: #8419d8; /* Updated background color */
+  color: white; /* Considering contrast, white text on the purple background */
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-duration: 100ms;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  text-transform: uppercase;
+  min-height: 2.25rem;
+  width: 100%;
+  --accentLightest: hsla(227, 87%, 59%, 0.3);
+  --accentLighter: hsla(227, 87%, 50%, 0.3);
+  --accent: #8419d8;
+  --accentDark: #5a0f9f; /* Consider changing to #5A0F9F for better contrast */
+  --accentDarker: #0a268f;
+  -webkit-font-smoothing: auto;
+}
+
+.cl-internal-b3fm6y {
+  box-sizing: inherit;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  color: white;
+  background-color: #8419d8; /* Updated background color */
+  padding-top: 0.375rem;
+  padding-right: 1rem;
+  position: absolute;
+  transform-origin-x: left;
+  transform-origin-y: bottom;
+  left: -1px;
+  top: 0.5rem;
+  bottom: unset;
+  transform: rotate(-90deg) translateX(-10rem);
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.cl-internal-17ydaof {
+  box-sizing: inherit;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  will-change: transform, opacity, height;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background-color: white;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-duration: 200ms;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  width: 25rem;
+  max-width: calc(-5rem + 100vw);
+  margin-top: 0px;
+  margin-right: 1.75rem;
+  padding-top: 2.375rem;
+  padding-right: 2rem;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+
+.cl-socialButtonsIconButton__github {
+  
 }

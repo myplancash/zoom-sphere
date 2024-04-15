@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const Loader = () => {
+export const Loader = () => {
   return (
     <div className='flex-center w-full h-screen'>
       <Image
@@ -13,5 +13,3 @@ const Loader = () => {
     </div>
   )
 }
-
-export default Loader

@@ -10,7 +10,7 @@ import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
 import { useUser } from '@clerk/nextjs';
 import {Loader} from './Loader';
 import { Textarea } from './ui/textarea';
-import ReactDatePicker from 'react-datepicker';
+import ReactDatePicker from 'react-datepicker'; 
 import { useToast } from './ui/use-toast';
 import { Input } from './ui/input';
 
@@ -98,6 +98,7 @@ const MeetingTypeList = () => {
         className="bg-yellow-1"
         handleClick={() => router.push('/recordings')}
       />
+
 
       {!callDetail ? (
         <MeetingModal

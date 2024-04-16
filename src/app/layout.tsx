@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "ZoomSphere App",
   description: "ZoomSphere isn't just another video conferencing platform; it's a transformative experience that redefines how we communicate and collaborate in the digital age.",
+  icons: {
+    icon: '/icons/logo.svg '
+  }
 };
 
 export default function RootLayout({

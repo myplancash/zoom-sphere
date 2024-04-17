@@ -4,25 +4,23 @@ import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
 
 export const useGetCalls = () => {
   const { user } = useUser();
-  const client = useStreamVideoClient(); //will be able to fetch our calls
-  const [calls , setCalls] = useState<Call[]>(); //also fetch call for speficic user
-  const [isLoading, setIsLoading] = useState(false); // track loading state
+  const client = useStreamVideoClient();
+  const [calls, setCalls] = useState<Call[]>();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const loadCalls = async () => {
       if (!client || !user?.id) return;
       
-      setIsLoading(true); // we started to fetch the calls  
+      setIsLoading(true);
 
       try {
         // https://getstream.io/video/docs/react/guides/querying-calls/#filters
         const { calls } = await client.queryCalls({
-          sort: [{ field: 'sta rts_at', direction: -1 }], //sorting them by when they start
+          sort: [{ field: 'starts_at', direction: -1 }],
           filter_conditions: {
-            starts_at: { $exists: true   },
-            'custom.color': 'red',
+            starts_at: { $exists: true },
             $or: [
-              // we want to show this call  if we are the one that created it or if we are a member withing the call 
               { created_by_user_id: user.id },
               { members: { $in: [user.id] } },
             ],
@@ -32,13 +30,13 @@ export const useGetCalls = () => {
         setCalls(calls);
       } catch (error) {
         console.error(error);
-      } finally { //whether we succeed or something went wrong in any case we need to stop the loading
-        setIsLoading(false); 
+      } finally {
+        setIsLoading(false);
       }
     };
 
     loadCalls();
-  }, [client, user?.id]); // we need both to properly fetch the meetings for user
+  }, [client, user?.id]);
 
   const now = new Date();
 

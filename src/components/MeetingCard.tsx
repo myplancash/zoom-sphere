@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 import { avatarImages } from "@/constants";
 import { useToast } from "./ui/use-toast";
 
-interface MeetingCardProps {
+ interface MeetingCardProps {
   title: string;
   date: string;
   icon: string;

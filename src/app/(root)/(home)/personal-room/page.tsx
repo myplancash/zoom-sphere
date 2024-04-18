@@ -4,12 +4,17 @@ import { useUser } from "@clerk/nextjs";
 import { useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useRouter } from "next/navigation";
 
-
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { useGetCallById } from "../../../../../hooks/useGetCallById";
 
-const Table = ({title, description,}: {title: string; description: string;}) => {
+const Table = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) => {
   return (
     <div className="flex flex-col items-start gap-2 xl:flex-row">
       <h1 className="text-base font-medium text-sky-1 lg:text-xl xl:min-w-32">
@@ -59,7 +64,7 @@ const PersonalRoom = () => {
         <Table title="Invite Link" description={meetingLink} />
       </div>
       <div className="flex gap-5">
-        <Button className="bg-blue-1" onClick={startRoom}>
+        <Button className="bg-purple-1" onClick={startRoom}>
           Start Meeting
         </Button>
         <Button

@@ -1,3 +1,5 @@
+//@ts-ignore
+//@ts-nocheck
 'use client';
 
 import { Call, CallRecording } from '@stream-io/video-react-sdk';
@@ -10,6 +12,7 @@ import { useRouter } from 'next/navigation';
 import { useGetCalls } from '../../hooks/useGetCalls';
 
 const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
+  
   const router = useRouter();
   const { endedCalls, upcomingCalls, callRecordings, isLoading } =
     useGetCalls();

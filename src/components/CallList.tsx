@@ -12,7 +12,7 @@ import { useRouter } from 'next/navigation';
 import { useGetCalls } from '../../hooks/useGetCalls';
 
 const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
-  
+
   const router = useRouter();
   const { endedCalls, upcomingCalls, callRecordings, isLoading } =
     useGetCalls();

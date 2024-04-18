@@ -1,5 +1,4 @@
 //@ts-ignore
-//@ts-nocheck
 'use client';
 
 import { Call, CallRecording } from '@stream-io/video-react-sdk';
@@ -10,8 +9,11 @@ import MeetingCard from './MeetingCard';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useGetCalls } from '../../hooks/useGetCalls';
+import { useToast } from './ui/use-toast';
+
 
 const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
+  const { toast } = useToast() 
 
   const router = useRouter();
   const { endedCalls, upcomingCalls, callRecordings, isLoading } =
@@ -46,15 +48,19 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
 
   useEffect(() => {
     const fetchRecordings = async () => {
-      const callData = await Promise.all(
-        callRecordings?.map((meeting) => meeting.queryRecordings()) ?? [],
-      );
-
-      const recordings = callData
-        .filter((call) => call.recordings.length > 0)
-        .flatMap((call) => call.recordings);
-
-      setRecordings(recordings);
+      try {
+        const callData = await Promise.all(
+          callRecordings?.map((meeting) => meeting.queryRecordings()) ?? [],
+        );
+  
+        const recordings = callData
+          .filter((call) => call.recordings.length > 0)
+          .flatMap((call) => call.recordings);
+  
+        setRecordings(recordings);
+      } catch(error) {
+        toast({title: 'Try again later'})
+      }
     };
 
     if (type === 'recordings') {
